@@ -20,8 +20,8 @@ public class Item {
     private Long id;
 
 
-//    @OneToMany(cascade = CascadeType.ALL) // прямая Item-Docs
-    @OneToMany // прямая Item-Docs
+    @OneToMany(cascade = CascadeType.REFRESH) // прямая Item-Docs
+//    @OneToMany // прямая Item-Docs
     @JoinColumn(name = "item_id")
     private List<Doc> docs;
 
