@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/src/test/java/nn/ru/HibernateTest3.java" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/test/java/nn/ru/HibernateTest3_create_drop_tables_test.java" dialect="PostgreSQL" />
     <file url="PROJECT" dialect="PostgreSQL" />
   </component>
 </project>

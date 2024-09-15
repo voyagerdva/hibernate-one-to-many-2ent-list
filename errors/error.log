@@ -27,7 +27,7 @@ org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: miss
 	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:728)
 	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:746)
-	at nn.ru.HibernateTest3.setUpAll(HibernateTest3.java:23)
+	at nn.ru.HibernateTest3_create_drop_tables_test.setUpAll(HibernateTest3.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

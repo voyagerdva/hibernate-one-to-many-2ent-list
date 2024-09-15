@@ -8,7 +8,9 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.junit.jupiter.api.*;
 
-public class HibernateTest3 {
+
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+public class HibernateTest3_create_drop_tables_test {
     private static SessionFactory sessionFactory;
     private Session session;
     private Transaction transaction;
@@ -72,12 +74,14 @@ public class HibernateTest3 {
 
     // Удаление таблиц
     private void dropTables() {
-        String dropDocTable = "DROP TABLE IF EXISTS doc";
-        String dropItemTable = "DROP TABLE IF EXISTS item";
+        String dropDocTable = "DROP TABLE IF EXISTS docs";
+        String dropItemTable = "DROP TABLE IF EXISTS items";
 
         // Выполняем SQL-запросы через Hibernate
+        transaction = session.beginTransaction();
         session.createNativeQuery(dropDocTable).executeUpdate();
         session.createNativeQuery(dropItemTable).executeUpdate();
+        transaction.commit();
     }
 
 
@@ -91,6 +95,7 @@ public class HibernateTest3 {
 
 
     @Test
+    @Order(1)
     void test_add_2docs_and_save() {
         Doc doc1 = new Doc();
         Doc doc2 = new Doc();
